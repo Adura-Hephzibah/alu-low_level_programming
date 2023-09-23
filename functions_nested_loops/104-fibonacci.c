@@ -9,13 +9,13 @@ int main(void)
 	unsigned long a = 1, b = 2, c;
 	int count = 0;
 
-	printf("1, 2, ");
+	printf("1, 2");
 
 	while (count < 96)
 	{
 		c = a + b;
 
-		printf("%lu, ", c);
+		printf(", %lu", c);
 
 		a = b;
 		b = c;
