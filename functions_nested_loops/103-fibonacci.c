@@ -6,23 +6,24 @@
  */
 int main(void)
 {
-	long int fib_nums[] = {};
-	int i;
-	int evenTotal = 0;
+	long int fib_nums[3];
+	long int evenTotal = 0;
 
 	fib_nums[0] = 1;
 	fib_nums[1] = 2;
 
-	while (fib_nums[i] < 4000000)
+	while (fib_nums[1] < 4000000)
 	{
-		fib_nums[i] = fib_nums[i - 1] + fib_nums[i - 2];
-
-		if (fib_nums[i] % 2 == 0)
+		if (fib_nums[1] % 2 == 0)
 		{
-			evenTotal += fib_nums[i];
+			evenTotal += fib_nums[1];
 		}
+		fib_nums[2] = fib_nums[0] + fib_nums[1];
+		fib_nums[0] = fib_nums[1];
+		fib_nums[1] = fib_nums[2];
 	}
-	printf("%d", evenTotal);
+
+	printf("%ld", evenTotal);
 	printf("\n");
 
 	return (0);
