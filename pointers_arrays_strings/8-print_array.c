@@ -1,6 +1,22 @@
 #include "main.h"
 #include <stdio.h>
 /**
+ * _strlen - returns the length of a string.
+ * @s: pointer to string
+ *
+ * Return: length
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (s[length] != '\0')
+		length++;
+
+	return (length);
+}
+
+/**
  * print_array - prints n elements of an array of integers,
  * followed by a new line.
  * Numbers must be separated by comma, followed by a space
@@ -15,11 +31,17 @@ void print_array(int *a, int n)
 {
 	int i = 0;
 
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%d, ", a[i]);
+		if (i != (n - 1))
+		{
+			printf("%d, ", a[i]);
+		}
+		else
+		{
+			printf("%d", a[n - 1]);
+		}
 	}
-	printf("%d", a[n - 1]);
 
 	printf("\n");
 }
