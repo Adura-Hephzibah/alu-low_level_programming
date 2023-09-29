@@ -16,7 +16,7 @@ int _strlen(char *s)
 }
 
 /**
- * rev_string - prints every other character of a string,
+ * puts2 - prints every other character of a string,
  * starting with the first character, followed by a new line.
  * @str: pointer to string
  *
@@ -29,7 +29,7 @@ void puts2(char *str)
 
 	while (index < rev)
 	{
-		if (index % 2 == 0 )
+		if (index % 2 == 0)
 		{
 			_putchar(str[index]);
 		}
