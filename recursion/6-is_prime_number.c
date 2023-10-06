@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  *is_prime - divide by higher divisor
+  *check_prime - divide by higher divisor
   *@n: number to check
   *@divisor: divisor number
   *Return: 1 if prime, 0 if not
