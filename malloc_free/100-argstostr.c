@@ -29,9 +29,11 @@ char *argstostr(int ac, char **av)
 
 	/* Allocate memory for the concatenated concating */
 	concat = malloc(len * sizeof(char));
-
 	if (concat == NULL)
+	{
+		free(concat);
 		return (NULL);
+	}
 
 	/* Copy each argument to the concat string */
 	for (i = 0; i < ac; i++)
@@ -45,6 +47,5 @@ char *argstostr(int ac, char **av)
 		k++;
 	}
 	concat[k] = '\0';
-
 	return (concat);
 }
