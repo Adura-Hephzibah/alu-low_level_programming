@@ -9,7 +9,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *concat = NULL;
-	int i, j, k, len = 0;
+	int len = 0, i, j, k = 0;
 
 	/* Check if ac is zero or av is NULL */
 	if (ac == 0 || av == NULL)
