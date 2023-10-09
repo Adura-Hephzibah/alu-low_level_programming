@@ -12,6 +12,7 @@ char *create_array(unsigned int size, char c)
 {
 
 	char *array = NULL; /* Declare a pointer to store the array */
+	unsigned int i;
 
 	/*Check if size is zero */
 	if (size == 0)
@@ -24,7 +25,7 @@ char *create_array(unsigned int size, char c)
 	if (array == NULL)
 		return (NULL);
 
-	for (unsigned int i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		array[i] = c;
 	}
